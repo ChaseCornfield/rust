@@ -26,7 +26,6 @@ enum Command
 
 mod my_module 
 {
-    use core::num;
 
     use super::Command;
 
