@@ -1,1 +1,1 @@
-/Users/eduardosarno/Documents/Code/Rust/course/target/debug/course: /Users/eduardosarno/Documents/Code/Rust/course/src/main.rs
+/Users/eduardosarno/Documents/Code/Rust/course/target/debug/course: /Users/eduardosarno/Documents/Code/Rust/course/src/entities/account.rs /Users/eduardosarno/Documents/Code/Rust/course/src/entities/bank.rs /Users/eduardosarno/Documents/Code/Rust/course/src/entities/mod.rs /Users/eduardosarno/Documents/Code/Rust/course/src/main.rs

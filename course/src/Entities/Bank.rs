@@ -1,4 +1,4 @@
-use crate::Entities::Account::BankAccount;
+use crate::entities::account::BankAccount;
 
 #[derive(Debug)]
 pub struct Bank{
@@ -16,5 +16,30 @@ pub struct Bank{
     {
          Bank {accounts: vec![]}
     }
-}
 
+    pub fn add_account(&mut self, account: BankAccount) 
+    {
+        self.accounts.push(account);
+    }
+
+    pub fn total_balance(&self) -> i32
+    {
+        let mut total = 0;
+
+        for account in &self.accounts 
+        {
+            total += account.get_balance();
+        }
+    
+        total
+    }
+
+    /// summary of the bank (accounts)
+    pub fn summary(&self) -> Vec<String>{
+        self.accounts
+            .iter()
+            .map(|account| account.summary())
+            .collect()
+        }
+
+}

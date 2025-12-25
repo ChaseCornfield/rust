@@ -1,2 +1,2 @@
-pub mod Bank;
-pub mod Account;
+pub mod bank;
+pub mod account;
