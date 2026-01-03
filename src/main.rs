@@ -1,6 +1,9 @@
-use std::{clone, f32::consts::E, fmt::Error};
-
-fn main()
-{
+fn main(){
+    struct Solution{}
     
+    impl Solution {
+        pub fn is_valid(s: String) -> bool {
+            
+        }
+    }
 }
