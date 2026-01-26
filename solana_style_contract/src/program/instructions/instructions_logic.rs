@@ -17,12 +17,7 @@ pub fn initialize<'a>(accounts: &'a [AccountInfo<'a>], program_id: &Pubkey) -> P
     require_uninitialized(&verified.state_data)?;
 
     // Create new initialized state with required fields
-    let new_state = State {
-        is_initialized: true,
-        authority: *verified.signer.key,
-        score: 0, // Initialize score to 0 or another default value as required
-        approved: false,
-    };
+    let new_state = State::new(true, *verified.signer.key, 0);
 
     // Serialize to account
     write_state(&new_state, verified.state_account)?;

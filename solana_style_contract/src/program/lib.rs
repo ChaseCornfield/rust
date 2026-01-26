@@ -19,11 +19,12 @@ pub struct MyAccount {
     pub score: u64,
 }
 
+
 #[cfg(not(feature = "exclude_entrypoint"))]
 entrypoint!(process_instruction);
 
 pub fn process_instruction<'a>(
-                            program_id: &Pubkey,
+    program_id: &Pubkey,
                             accounts: &'a [AccountInfo<'a>],
                             instruction_data: &[u8],
                         ) -> ProgramResult 

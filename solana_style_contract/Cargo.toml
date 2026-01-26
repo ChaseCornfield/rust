@@ -9,3 +9,5 @@ borsh = "0.10"
 
 [features]
 exclude_entrypoint = []
+custom-heap = []
+custom-panic = []

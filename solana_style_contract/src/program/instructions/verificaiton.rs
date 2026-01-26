@@ -8,7 +8,6 @@ use super::state::State;
 pub struct VerifiedAccounts<'a> {
     pub signer: &'a AccountInfo<'a>,
     pub state_account: &'a AccountInfo<'a>,
-    pub token_program: &'a AccountInfo<'a>,
     pub state_data: State,
 }
 
@@ -20,8 +19,6 @@ pub fn verify<'a>(
     
     let signer = next_account_info(accounts_iter)?;
     let state = next_account_info(accounts_iter)?;
-    let token_program = next_account_info(accounts_iter)?;
-    
     // All your verification checks...
     if !signer.is_signer {
         return Err(ProgramError::MissingRequiredSignature);
@@ -45,7 +42,6 @@ pub fn verify<'a>(
     Ok(VerifiedAccounts {
         signer,
         state_account: state,
-        token_program,
         state_data,
     })
 }
